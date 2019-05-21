@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'caslon_fsbook';
+    src: url('~assets/fonts/caslon-book-webfont.woff2') format('woff2'),
+    url('~assets/fonts/caslon-book-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin calsonFSBook () {
+    font-family: 'calson_fsbook', 'serif';
+}
+
+@mixin fontFamily($font) {
+    // change to switch once more than one font
+    @if $font == 'calson_fsbook' {
+        @include calsonFSBook();
+    }
+}
